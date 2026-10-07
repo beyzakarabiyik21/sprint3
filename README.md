@@ -1,1 +1,1 @@
-sprint3-bay.vercel.app
+https://sprint3-bay.vercel.app
