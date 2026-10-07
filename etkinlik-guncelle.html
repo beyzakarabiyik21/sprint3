@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script type="module" src="js/event-form.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etkinlik Güncelle - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2416501003.css">
+</head>
+<body>
+
+  <header>
+    <h1>Etkinlik Güncelle</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="etkinlikler.html">Etkinlikler</a>
+      <a href="etkinlik-ekle.html">Ekle</a>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <div id="no-id-warning" class="warning-box" style="display: none;">
+      <p style="margin-bottom: 12px;">Güncellenecek etkinlik seçilmedi. Önce listeden bir etkinlik seçin, detay sayfasındaki "Bu etkinliği güncelle" butonunu kullanın.</p>
+      <a href="etkinlikler.html" class="btn">Etkinliklere git</a>
+    </div>
+
+    <div id="update-form-container">
+      <p class="form-info-note" style="color: #666; font-size: 0.88rem; margin-bottom: 20px;">
+        Alanlar mevcut etkinliğin bilgileriyle dolu gelir. Bu sprintte form veri güncellemez.
+      </p>
+
+      <form id="update-event-form" class="custom-form" novalidate>
+        <div class="form-grup">
+          <label for="title">Etkinlik Adı *</label>
+          <input type="text" id="title" name="title">
+          <small class="error-text" id="error-title"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="category">Kategori *</label>
+          <select id="category" name="category">
+            <option value="Seminer">Seminer</option>
+            <option value="Atölye">Atölye</option>
+            <option value="Söyleşi">Söyleşi</option>
+          </select>
+          <small class="error-text" id="error-category"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="date">Tarih *</label>
+          <input type="date" id="date" name="date">
+          <small class="error-text" id="error-date"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="time">Saat *</label>
+          <input type="time" id="time" name="time">
+          <small class="error-text" id="error-time"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="location">Yer *</label>
+          <input type="text" id="location" name="location">
+          <small class="error-text" id="error-location"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="capacity">Kontenjan *</label>
+          <input type="number" id="capacity" name="capacity">
+          <small class="error-text" id="error-capacity"></small>
+        </div>
+
+        <div class="form-grup">
+          <label for="description">Açıklama</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+          <small class="error-text" id="error-description"></small>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Güncelle</button>
+      </form>
+
+      <!-- Güncelleme Sonrası Yeşil JSON Kutusu -->
+      <div id="update-message" style="margin-top: 20px;"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Ad Soyad · 2416501003 · 2026</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script type="module" src="js/event-list.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tüm Etkinlikler - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2416501003.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tüm Etkinlikler</h1>
+    <p>Ekim ayında kampüste düzenlenen etkinlikler.</p>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="etkinlikler.html" class="aktif">Etkinlikler</a>
+      <a href="etkinlik-ekle.html">Ekle</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="filter-section">
+      <div>
+        <label for="search-input">Etkinlik ara</label>
+        <input type="text" id="search-input" placeholder="atölye">
+      </div>
+      <div>
+        <label for="category-select">Kategori</label>
+        <select id="category-select">
+          <option value="Tümü">Tümü</option>
+          <option value="Seminer">Seminer</option>
+          <option value="Atölye">Atölye</option>
+          <option value="Söyleşi">Söyleşi</option>
+        </select>
+      </div>
+    </div>
+
+    <p id="result-count-text" class="count-text"></p>
+
+    <section class="etkinlikler-grid" id="events-list"></section>
+  </main>
+
+  <footer>
+    <p>Ad Soyad · 2416501003 · 2026</p>
+  </footer>
+
+</body>
+</html>
